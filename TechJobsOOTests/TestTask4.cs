@@ -1,8 +1,8 @@
-﻿/*
-using System;
+﻿using System;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TechJobsTests;
+// updated using TechJobsTests to using TechJobsTest per Angelina's Slack post/DM
+using TechJobsTest;
 
 
 namespace TechJobsOOTests
@@ -152,5 +152,3 @@ namespace TechJobsOOTests
 
     }
 }
-*/
-
