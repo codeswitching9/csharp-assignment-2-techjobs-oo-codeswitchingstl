@@ -1,5 +1,4 @@
-﻿/*
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -7,7 +6,7 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechJobsOO;
 using TechJobsOOAutograded;
-using TechJobsTests;
+using TechJobsTest;
 
 namespace TechJobsOOTests
 {
@@ -156,4 +155,3 @@ namespace TechJobsOOTests
         }
     }
 }
-*/
