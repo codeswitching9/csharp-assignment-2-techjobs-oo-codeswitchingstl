@@ -75,5 +75,15 @@ namespace TechJobsTest
             Assert.IsTrue(job5.Contains("Quality control"));
             Assert.IsTrue(job5.Contains("Persistence"));
         }
+
+        // task 5 - test 3
+        [TestMethod]
+        public void TestToStringHandlesEmptyField()
+        {
+            TechJob job6 = new TechJob("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            string job7 = job6.ToString();
+
+            Assert.IsTrue(job7.Contains("Data not available."));
+        }
     }
 }
