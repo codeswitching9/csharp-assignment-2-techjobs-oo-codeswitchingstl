@@ -48,11 +48,32 @@ namespace TechJobsTest
         [TestMethod]
         public void TestToStringStartsAndEndsWithNewLine()
         {
-            TechJob job1 = new TechJob();
-            // NOTE: original parameters of method ("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            TechJob job3 = new TechJob();
+            string expected = Environment.NewLine + "ID: " + job3.Id + "\nName: " + job3.Name + "\nEmployer: " + job3.EmployerName + "\nLocation: " + job3.EmployerLocation + "\nPosition Type: " + job3.JobType + "\nCore Competency: " + job3.JobCoreCompetency + Environment.NewLine;
+            job3.ToString().Equals(expected);
+        }
 
-            string expected = Environment.NewLine + "ID: " + job1.Id + "\nName: " + job1.Name + "\nEmployer: " + job1.EmployerName + "\nLocation: " + job1.EmployerLocation + "\nPosition Type: " + job1.JobType + "\nCore Competency: " + job1.JobCoreCompetency + Environment.NewLine;
-            job1.ToString().Equals(expected);
+        // task 5 - test 2
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+            TechJob job4 = new TechJob("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            string job5 = job4.ToString();
+
+            // checks that labels are contained in string
+            Assert.IsTrue(job5.Contains("ID:"));
+            Assert.IsTrue(job5.Contains("Name:"));
+            Assert.IsTrue(job5.Contains("Employer:"));
+            Assert.IsTrue(job5.Contains("Location:"));
+            Assert.IsTrue(job5.Contains("Position Type:"));
+            Assert.IsTrue(job5.Contains("Core Competency:"));
+
+            // checks that data is contained in string
+            Assert.IsTrue(job5.Contains("Product tester"));
+            Assert.IsTrue(job5.Contains("ACME"));
+            Assert.IsTrue(job5.Contains("Desert"));
+            Assert.IsTrue(job5.Contains("Quality control"));
+            Assert.IsTrue(job5.Contains("Persistence"));
         }
     }
 }
