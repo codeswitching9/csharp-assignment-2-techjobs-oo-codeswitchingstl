@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TechJobsOO;
 
 namespace TechJobsTest
@@ -47,9 +48,11 @@ namespace TechJobsTest
         [TestMethod]
         public void TestToStringStartsAndEndsWithNewLine()
         {
-            TechJob job1 = new TechJob()/*("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"))*/;
+            TechJob job1 = new TechJob();
+            // NOTE: original parameters of method ("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-            //string expected = 
+            string expected = Environment.NewLine + "ID: " + job1.Id + "\nName: " + job1.Name + "\nEmployer: " + job1.EmployerName + "\nLocation: " + job1.EmployerLocation + "\nPosition Type: " + job1.JobType + "\nCore Competency: " + job1.JobCoreCompetency + Environment.NewLine;
+            job1.ToString().Equals(expected);
         }
     }
 }
