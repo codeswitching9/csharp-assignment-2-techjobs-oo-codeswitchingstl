@@ -56,7 +56,7 @@ namespace TechJobsOOTests
 
 
         [TestMethod] //3
-        public void Test_Second_Location_Constructor_Initializes_Id()
+        public void Test_Second_Location_Constructor_Sets_Id()
         {
             //setup
             Location testLocation = new Location("Desert");

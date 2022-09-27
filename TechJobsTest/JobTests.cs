@@ -26,7 +26,7 @@ namespace TechJobsTest
             Location location = new Location("Desert");
             PositionType positionType = new PositionType("Quality control");
             CoreCompetency competency = new CoreCompetency("Persistence");*/
-            TechJob job1 = new TechJob("Product tester", new Employer ("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            TechJob job1 = new TechJob("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             Assert.AreEqual(job1.Name, "Product tester");
             Assert.AreEqual(job1.EmployerName, "ACME");
             Assert.AreEqual(job1.EmployerLocation, "Desert");
@@ -69,6 +69,7 @@ namespace TechJobsTest
             Assert.IsTrue(job5.Contains("Core Competency:"));
 
             // checks that data is contained in string
+            Assert.IsTrue(job5.Contains("9"));
             Assert.IsTrue(job5.Contains("Product tester"));
             Assert.IsTrue(job5.Contains("ACME"));
             Assert.IsTrue(job5.Contains("Desert"));

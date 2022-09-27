@@ -62,8 +62,6 @@ namespace TechJobsOOTests
            Assert.AreEqual(text, output, "New Line issue");
         }
 
-
-
         [TestMethod]  //3
         public void TestToStringContainsCorrectLabelsAndData_Exists()
         {
