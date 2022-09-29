@@ -14,7 +14,7 @@ namespace TechJobsTest
             TechJob job1 = new TechJob();
             TechJob job2 = new TechJob();
             Assert.IsFalse(job1.Equals(job2));
-            Assert.AreEqual(job1.Id - job2.Id, 1);
+            Assert.AreEqual(job1.Id - job2.Id, -1);
         }
 
         // testing the full constructor
