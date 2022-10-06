@@ -75,6 +75,7 @@ namespace TechJobsOO
 
             return Environment.NewLine + "ID: " + Id + Environment.NewLine +
                 "Name: " + Name + Environment.NewLine +
+                "Employer: " + EmployerName.Value + Environment.NewLine +
                 "Location: " + EmployerLocation.Value + Environment.NewLine +
                 "Position Type: " + JobType.Value + Environment.NewLine +
                 "Core Competency: " + JobCoreCompetency.Value + Environment.NewLine;
