@@ -48,11 +48,13 @@ namespace TechJobsTest
         [TestMethod]
         public void TestToStringStartsAndEndsWithNewLine()
         {
-            TechJob job3 = new TechJob();
-            string expected = Environment.NewLine + "ID: " + job3.Id + "\nName: " + job3.Name + "\nEmployer: " + job3.EmployerName + "\nLocation: " + job3.EmployerLocation + "\nPosition Type: " + job3.JobType + "\nCore Competency: " + job3.JobCoreCompetency + Environment.NewLine;
-            job3.ToString().Equals(expected);
+            TechJob job3 = new TechJob("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            string jobString = job3.ToString();
+            Assert.IsTrue(jobString.StartsWith(Environment.NewLine));
+            Assert.IsTrue(jobString.EndsWith(Environment.NewLine));
         }
 
+        // FIX THIS!!!
         // task 5 - test 2
         [TestMethod]
         public void TestToStringContainsCorrectLabelsAndData()
@@ -60,6 +62,7 @@ namespace TechJobsTest
             TechJob job4 = new TechJob("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             string job5 = job4.ToString();
 
+            // FIX THIS!!!
             // checks that labels are contained in string
             Assert.IsTrue(job5.Contains("ID:"));
             Assert.IsTrue(job5.Contains("Name:"));
@@ -68,7 +71,8 @@ namespace TechJobsTest
             Assert.IsTrue(job5.Contains("Position Type:"));
             Assert.IsTrue(job5.Contains("Core Competency:"));
 
-            // checks that data is contained in string
+            // FIX THIS!!!
+            // checks that data is contained in string 
             Assert.IsTrue(job5.Contains("9"));
             Assert.IsTrue(job5.Contains("Product tester"));
             Assert.IsTrue(job5.Contains("ACME"));
@@ -77,6 +81,7 @@ namespace TechJobsTest
             Assert.IsTrue(job5.Contains("Persistence"));
         }
 
+        // FIX THIS!!!
         // task 5 - test 3
         [TestMethod]
         public void TestToStringHandlesEmptyField()
