@@ -1,5 +1,4 @@
-﻿/*
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -7,7 +6,7 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechJobsOO;
 using TechJobsOOAutograded;
-using TechJobsTests;
+using TechJobsTest;
 
 namespace TechJobsOOTests
 {
@@ -62,8 +61,6 @@ namespace TechJobsOOTests
             //verify
            Assert.AreEqual(text, output, "New Line issue");
         }
-
-
 
         [TestMethod]  //3
         public void TestToStringContainsCorrectLabelsAndData_Exists()
@@ -156,4 +153,3 @@ namespace TechJobsOOTests
         }
     }
 }
-*/
